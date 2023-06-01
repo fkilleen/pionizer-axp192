@@ -225,11 +225,6 @@ namespace esphome
 
         void AXP192Component::UpdateBrightness()
         {
-            if (brightness_ == curr_brightness_)
-            {
-                return;
-            }
-
             ESP_LOGD(TAG, "Brightness=%f (Curr: %f)", brightness_, curr_brightness_);
 
             const uint8_t c_min = 7;
